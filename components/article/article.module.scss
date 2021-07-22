@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.container {
+    width: 700px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #e9e9e9,
+                -20px -20px 60px #ffffff;
+}
+
+.title {
+    &:hover {
+        color: $link-color;
+      }
+}
