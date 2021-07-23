@@ -5,6 +5,7 @@ export function Button(props) {
         <button 
             className={styles.button}
             onClick={props.onClick}
+            type={props.type}
         >
             {props.children}
         </button>
