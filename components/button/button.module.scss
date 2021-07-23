@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.button {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    color: $white;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: $btn-bck-color;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: 1s;
+    }
+}

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Button } from "../button/Button"
 import Input from "../input/Input"
 import { Textarea } from "../textarea/Textarea"
 import styles from './articleCreator.module.scss'
@@ -20,6 +21,7 @@ export default function ArticleCreator() {
                 onChange={(e) => setDesc(e.target.value)}
                 value={desc}
             />
+            <Button>Send</Button>
         </div>
     )
 }
