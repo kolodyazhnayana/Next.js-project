@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.textarea {
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: 1px solid $border-input-color;
+    padding: 10px;
+    color: $main-color;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 8em;
+}
