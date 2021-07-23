@@ -6,7 +6,7 @@ export default function News(props) {
     return (
         <div className={styles.container}>
             <Link href={props.data.url}>
-                <a>
+                <a target='_blank'>
                     <h2 className={styles.title}>{props.data.title}</h2>
                 </a>
             </Link>

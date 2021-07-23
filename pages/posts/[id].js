@@ -24,7 +24,6 @@ export async function getStaticPaths() {
 }
 
 export default function Post(props) {
-    console.log(props)
     return (
         <Layout>
             <Head>
