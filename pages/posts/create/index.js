@@ -1,7 +1,14 @@
-import Layout from "../../../components/layout/Layout";
+import Layout from "../../../components/layout/Layout"
+import Head from 'next/head'
+import ArticleCreator from "../../../components/articleCreator/ArticleCreator"
 
 export default function Favorites() {
     return (
-        <Layout>Create post</Layout>
+        <Layout>
+            <Head>
+                <title>Create</title>
+            </Head>
+            <ArticleCreator />
+        </Layout>
     )
 }
