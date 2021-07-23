@@ -3,11 +3,11 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import News from '../components/news/News'
 import List from '../components/list/List'
+import { getNews } from '../api/getNews'
 
 export async function getServerSideProps() {
-  const res = await fetch('https://newsapi.org/v2/everything?q=Apple&from=2021-07-22&sortBy=popularity&apiKey=0414355101d342629c26db7d8f0ae77c')
-  const news = await res.json()
-  console.log(news);
+  const news = await getNews()
+  console.log(news)
   return {
     props: {
       news
@@ -16,7 +16,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home(props) {
-  let news = props.news.articles.map((item, index) => <News data={item} key={index} />)
+  let news = props.news.news.articles.map((item, index) => <News data={item} key={index} />)
   return (
     <Layout>
       <Head>

@@ -10,8 +10,8 @@ export default function Navigation() {
             <Link href='/posts/'> 
                 <a>Posts</a>
             </Link>
-            <Link href='/posts/favorites/'> 
-                <a>Favorites</a>
+            <Link href='/posts/create/'> 
+                <a>Create</a>
             </Link>
         </div>
     )
