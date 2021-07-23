@@ -3,3 +3,9 @@
     justify-content: space-between;
     width: 50%;
 }
+
+.link {
+    a:active {
+        text-decoration: underline;
+    }
+}

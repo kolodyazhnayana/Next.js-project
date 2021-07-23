@@ -5,7 +5,7 @@ export default function Navigation() {
     return (
         <div className={styles.container}>
             <Link href='/'>
-                <a>Home</a>
+                <a className={styles.link}>Home</a>
             </Link>
             <Link href='/posts/'> 
                 <a>Posts</a>
