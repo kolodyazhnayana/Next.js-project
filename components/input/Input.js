@@ -1,8 +1,8 @@
 import styles from './input.module.scss'
 
 export default function Input(props) {
-    let classList = props.error == true ? styles.input_error : ''
-    let placeholder = props.error == true ? props.errorName : props.placeholder
+    let classList = props.error == 'true' ? styles.input_error : ''
+    let placeholder = props.error == 'true' ? props.errorText : props.placeholder
     
     return (
         <input 
@@ -11,7 +11,6 @@ export default function Input(props) {
             placeholder={placeholder}
             name={props.name}
             onChange={props.onChange}
-            errorName={props.errorName}
             error={props.error}
         />
     )
