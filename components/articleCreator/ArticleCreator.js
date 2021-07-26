@@ -28,6 +28,8 @@ function ArticleCreator(props) {
             id: props.id
         }        
         dispatch(addArticle(article))
+        setTitle('')
+        setDesc('')
         e.preventDefault()
     }
 
