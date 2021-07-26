@@ -3,16 +3,23 @@ import { Button } from "../button/Button"
 import Input from "../input/Input"
 import { Textarea } from "../textarea/Textarea"
 import styles from './articleCreator.module.scss'
+import { addArticle } from '../../store/actionCreators'
+import { useDispatch } from "react-redux"
+import { connect } from "react-redux"
 
-export default function ArticleCreator() {
+function ArticleCreator(props) {
     const [title, setTitle] = useState('')
     const [desc, setDesc] = useState('')
 
+    const dispatch = useDispatch()
+
     const handleSubmit = (e) => {
-        let post = {
-            title: title,
-            description: desc
-        }
+        let article = {
+            name: title,
+            description: desc,
+            id: props.id
+        }        
+        dispatch(addArticle(article))
         e.preventDefault()
     }
 
@@ -20,7 +27,7 @@ export default function ArticleCreator() {
         <div className={styles.container}>
             <form onSubmit={handleSubmit}>
                 <Input 
-                    name='title'
+                    name='name'
                     placeholder='Title'
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
@@ -40,3 +47,11 @@ export default function ArticleCreator() {
         </div>
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        id: state.id
+    }
+}
+
+export default connect (mapStateToProps, () => ({}))(ArticleCreator)

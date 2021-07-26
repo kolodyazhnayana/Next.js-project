@@ -1,8 +1,18 @@
 import '../styles/globals.scss'
+ import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import reducer from '../store/reducer'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
 
-function MyApp({ Component, pageProps }) {
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  return (
+      <Provider store={store} >
+        <Component {...pageProps} />
+      </Provider>
+  ) 
 }
 
-export default MyApp
+export default App
