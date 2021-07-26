@@ -9,4 +9,8 @@
     max-width: 100%;
     min-width: 100%;
     min-height: 8em;
+
+    &_error {
+        border: 1px solid $author-color;
+    }
 }

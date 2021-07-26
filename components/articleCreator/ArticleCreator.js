@@ -10,10 +10,18 @@ import { connect } from "react-redux"
 function ArticleCreator(props) {
     const [title, setTitle] = useState('')
     const [desc, setDesc] = useState('')
+    const [error, setError] = useState(false)
 
     const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
+        if(title == '' || desc == '') {
+            setError(true)
+            e.preventDefault()
+            return
+        } else {
+            setError(false)
+        }
         let article = {
             name: title,
             description: desc,
@@ -31,12 +39,16 @@ function ArticleCreator(props) {
                     placeholder='Title'
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
+                    error={error}
+                    errorName='Fill in the name'
                 />
                 <Textarea
                     name='description'
                     placeholder='Description'
                     onChange={(e) => setDesc(e.target.value)}
                     value={desc}
+                    error={error}
+                    errorName='Fill in the description'
                 />
                 <Button 
                     type='submit'

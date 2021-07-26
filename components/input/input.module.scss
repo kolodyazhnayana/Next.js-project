@@ -7,4 +7,8 @@
     border: 1px solid $border-input-color;
     padding: 10px;
     color: $main-color;
+
+    &_error {
+        border: 1px solid $author-color;
+    }
 }
