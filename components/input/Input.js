@@ -12,6 +12,7 @@ export default function Input(props) {
             name={props.name}
             onChange={props.onChange}
             error={props.error}
+            type={props.type}
         />
     )
 }

@@ -2,3 +2,14 @@
     width: 500px;
     margin: 0 auto 20px;
 }
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 170px;
+    border-radius: 20px;
+}
